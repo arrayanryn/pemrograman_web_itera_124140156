@@ -1,0 +1,427 @@
+/* ============================================================
+   PERSONAL DASHBOARD — MAHASISWA ITERA
+   Styling antarmuka — Arrayan Ihfanul Faqih (124140156) — RA
+   Tema: gelap modern (dark mode) dengan aksen indigo
+   ============================================================ */
+
+/* ---------- RESET & VARIABEL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --latar: #0f172a;
+  --kartu: #1e293b;
+  --kartu-border: #334155;
+  --teks: #e2e8f0;
+  --teks-redup: #94a3b8;
+  --aksen: #6366f1;
+  --aksen-terang: #818cf8;
+  --hijau: #22c55e;
+  --merah: #ef4444;
+  --kuning: #eab308;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 80% -10%, #1e1b4b 0%, var(--latar) 55%);
+  color: var(--teks);
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HEADER & FOOTER ---------- */
+.app-header {
+  text-align: center;
+  padding: 28px 16px 20px;
+}
+
+.app-header h1 {
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, var(--aksen-terang), #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 4px;
+}
+
+.app-header p {
+  color: var(--teks-redup);
+  font-size: 0.92rem;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 0.82rem;
+  color: var(--teks-redup);
+}
+
+/* ---------- LAYOUT ---------- */
+.layout {
+  flex: 1;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 10px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.widget-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: var(--kartu);
+  border: 1px solid var(--kartu-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1rem;
+  color: var(--aksen-terang);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--kartu-border);
+}
+
+/* ---------- WIDGET JAM ---------- */
+.jam {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--teks);
+  font-variant-numeric: tabular-nums;
+}
+
+.tanggal {
+  color: var(--teks-redup);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* ---------- WIDGET CUACA ---------- */
+.isi-cuaca .memuat,
+.isi-cuaca .cuaca-gagal {
+  color: var(--teks-redup);
+  font-style: italic;
+}
+
+.isi-cuaca .cuaca-gagal {
+  color: var(--kuning);
+}
+
+.cuaca-utama {
+  font-size: 2.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cuaca-utama .suhu {
+  color: var(--teks);
+}
+
+.cuaca-label {
+  color: var(--aksen-terang);
+  font-weight: 600;
+}
+
+.cuaca-detail {
+  color: var(--teks-redup);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* ---------- WIDGET QUOTE ---------- */
+.quote-teks {
+  font-style: italic;
+  color: var(--teks);
+  min-height: 3.2em;
+}
+
+.quote-asal {
+  color: var(--aksen-terang);
+  font-size: 0.88rem;
+  margin: 6px 0 12px;
+}
+
+/* ---------- TOMBOL ---------- */
+.btn {
+  display: inline-block;
+  padding: 9px 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.05s;
+}
+
+.btn:hover { filter: brightness(1.15); }
+.btn:active { transform: scale(0.97); }
+
+.btn-primary { background: var(--aksen); }
+.btn-abu { background: #475569; }
+.btn-edit { background: var(--kuning); color: #1c1917; }
+.btn-danger { background: var(--merah); }
+
+.btn-kecil {
+  padding: 6px 11px;
+  font-size: 0.8rem;
+  border-radius: 7px;
+}
+
+/* ---------- FORM TAMBAH TUGAS ---------- */
+.form-baris {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.93rem;
+  color: var(--teks);
+  background: #0f172a;
+  border: 1.5px solid var(--kartu-border);
+  border-radius: 9px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--aksen);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.form-group input.input-error {
+  border-color: var(--merah);
+  background: #2a1215;
+}
+
+.pesan-error {
+  display: block;
+  color: var(--merah);
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-height: 1.15em;
+  margin-top: 4px;
+}
+
+/* ---------- TOOLBAR: FILTER + PROGRES ---------- */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 4px 0 14px;
+}
+
+.filter {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-filter {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teks-redup);
+  background: transparent;
+  border: 1.5px solid var(--kartu-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-filter:hover {
+  border-color: var(--aksen-terang);
+  color: var(--teks);
+}
+
+.btn-filter.aktif {
+  background: var(--aksen);
+  border-color: var(--aksen);
+  color: #fff;
+}
+
+.progres {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.progres-bar {
+  flex: 1;
+  height: 10px;
+  background: #0f172a;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progres-isi {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--aksen), var(--hijau));
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progres-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--aksen-terang);
+  min-width: 38px;
+  text-align: right;
+}
+
+/* ---------- DAFTAR TUGAS ---------- */
+.daftar-tugas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.daftar-tugas .kosong {
+  text-align: center;
+  color: var(--teks-redup);
+  font-style: italic;
+  padding: 26px 10px;
+  border: 1.5px dashed var(--kartu-border);
+  border-radius: 10px;
+}
+
+.daftar-tugas .item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #172136;
+  border: 1px solid var(--kartu-border);
+  border-radius: 10px;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.daftar-tugas .item:hover {
+  border-color: var(--aksen);
+}
+
+.daftar-tugas .item.tercapai {
+  opacity: 0.6;
+}
+
+.daftar-tugas .item.tercapai .judul {
+  text-decoration: line-through;
+}
+
+.daftar-tugas .item input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  accent-color: var(--hijau);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.daftar-tugas .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.daftar-tugas .judul {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.daftar-tugas .matkul {
+  font-size: 0.78rem;
+  color: var(--teks-redup);
+}
+
+.daftar-tugas .aksi {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* mode edit inline */
+.daftar-tugas .item.sedang-edit {
+  border-color: var(--aksen-terang);
+}
+
+.edit-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-form input {
+  padding: 8px 11px;
+  font-size: 0.9rem;
+  color: var(--teks);
+  background: #0f172a;
+  border: 1.5px solid var(--aksen);
+  border-radius: 8px;
+  outline: none;
+}
+
+.edit-aksi {
+  display: flex;
+  gap: 8px;
+}
+
+.statistik {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--teks-redup);
+  text-align: right;
+}
+
+/* ---------- RESPONSIF ---------- */
+@media (max-width: 860px) {
+  .widget-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-baris {
+    grid-template-columns: 1fr;
+  }
+
+  .form-baris .btn {
+    width: 100%;
+  }
+
+  .jam {
+    font-size: 1.9rem;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Dashboard — Mahasiswa ITERA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🎒 Personal Dashboard</h1>
+    <p>Asisten produktivitas mahasiswa — Arrayan Ihfanul Faqih · 124140156 · RA</p>
+  </header>
+
+  <main class="layout">
+    <!-- ============ BARIS WIDGET ATAS ============ -->
+    <section class="widget-row">
+
+      <div class="card card-jam">
+        <h2 class="card-title">🕐 Waktu Saat Ini</h2>
+        <p id="jam" class="jam">--:--:--</p>
+        <p id="tanggal" class="tanggal">—</p>
+      </div>
+
+      <div class="card card-cuaca">
+        <h2 class="card-title">🌤️ Cuaca ITERA</h2>
+        <div id="isiCuaca" class="isi-cuaca">
+          <p class="memuat">Memuat data cuaca…</p>
+        </div>
+      </div>
+
+      <div class="card card-quote">
+        <h2 class="card-title">💬 Quote Harian</h2>
+        <p id="quoteTeks" class="quote-teks">Memuat quote…</p>
+        <p id="quoteAsal" class="quote-asal"></p>
+        <button type="button" id="btnQuoteBaru" class="btn btn-kecil btn-abu">🔄 Quote Lain</button>
+      </div>
+    </section>
+
+    <!-- ============ TO-DO TUGAS KULIAH ============ -->
+    <section class="card card-todo">
+      <h2 class="card-title">📝 Daftar Tugas Kuliah</h2>
+
+      <form id="formTugas" novalidate>
+        <div class="form-baris">
+          <div class="form-group">
+            <label for="inputJudul">Judul Tugas</label>
+            <input type="text" id="inputJudul" placeholder="Contoh: Kerjakan lab PAW" autocomplete="off" />
+            <small class="pesan-error" id="pesanError"></small>
+          </div>
+          <div class="form-group">
+            <label for="inputMatkul">Mata Kuliah (opsional)</label>
+            <input type="text" id="inputMatkul" placeholder="Contoh: PAW" autocomplete="off" />
+          </div>
+          <button type="submit" class="btn btn-primary">➕ Tambah</button>
+        </div>
+      </form>
+
+      <div class="toolbar">
+        <div class="filter" id="filter">
+          <button type="button" class="btn-filter aktif" data-filter="semua">Semua</button>
+          <button type="button" class="btn-filter" data-filter="aktif">Aktif</button>
+          <button type="button" class="btn-filter" data-filter="selesai">Selesai</button>
+        </div>
+        <div class="progres">
+          <div class="progres-bar"><div id="progresIsi" class="progres-isi"></div></div>
+          <span id="progresLabel" class="progres-label">0%</span>
+        </div>
+      </div>
+
+      <ul id="daftarTugas" class="daftar-tugas"><!-- diisi JavaScript --></ul>
+
+      <p id="statistik" class="statistik"></p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Arrayan Ihfanul Faqih — 124140156 — RA | Praktikum Pemrograman Web ITERA · Pertemuan 2 (ES6+)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

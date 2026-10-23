@@ -79,6 +79,11 @@ Mode edit langsung pada baris item: input judul & mata kuliah, tombol Simpan/Bat
 
 ![Interaksi Penuh](screenshots/4-interaksi-penuh.png)
 
+### 5. Praktikum Modul (Run Demo)
+Project latihan `modul/` dijalankan via Live Server (HTTP) — 12 demo ES6+ tampil sekaligus: variabel, arrow functions, template literals, destructuring, spread/rest, default params, classes, object literals, array methods, advanced arrays, promises, dan async/await.
+
+![Modul Run Demo](screenshots/5-modul-run-demo.png)
+
 ---
 
 ## ⚡ Daftar Fitur ES6+ yang Diimplementasikan (dengan baris kode)
@@ -150,15 +155,17 @@ arrayanihfanulfaqih_124140156_pertemuan2/
 ├── style.css       # Styling tema gelap + responsif
 ├── script.js       # Logika ES6+ (classes, async/await, localStorage)
 ├── README.md       # Dokumentasi tugas
-├── screenshots/    # 4 screenshot aplikasi
-├── scripts/        # Script screenshot otomatis (Chrome headless + CDP)
-├── test/           # Tes logika otomatis (34 assertions)
-└── modul/          # File latihan praktikum
+├── screenshots/    # 5 screenshot (4 dashboard + 1 praktikum modul)
+├── scripts/        # Script screenshot otomatis + mini static server
+├── test/           # Tes logika otomatis (34 + 56 assertions)
+└── modul/          # Project latihan praktikum (project-js-nextgen, 12 demo ES6+)
 ```
 
 ## 🧪 Pengujian
 
-Tes otomatis (`node test/test-logic.js`) dengan mock DOM/localStorage/fetch: **34/34 lulus** — mencakup seed API, CRUD, immutability spread, filter & progres, validasi form, persist localStorage, dan render widget asinkron.
+- Tes dashboard (`node test/test-logic.js`, mock DOM/localStorage/fetch): **34/34 lulus** — seed API, CRUD, immutability spread, filter & progres, validasi form, persist localStorage, render widget asinkron.
+- Tes modul latihan (`node test/test-modul.mjs`, ES module): **56/56 lulus** — seluruh 12 fungsi demo ES6+ diverifikasi hasilnya.
+- Halaman modul diverifikasi berjalan di Chrome nyata melalui server HTTP (`scripts/server-modul.js`) karena ES modules tidak bisa jalan via `file://` (lihat screenshot ke-5).
 
 ## 🔗 Repository
 

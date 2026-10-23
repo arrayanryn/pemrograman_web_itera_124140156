@@ -1,0 +1,41 @@
+/* ============================================================
+   Praktikum Pertemuan 2 — JavaScript Next Gen (ES6+)
+   Styling kustom pendamping Tailwind — Arrayan Ihfanul Faqih
+   ============================================================ */
+
+/* Kartu hasil demo */
+.output-item {
+  animation: muncul 0.25s ease-out;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blok hasil (pre) agar teks panjang tidak melebar */
+pre.result {
+  line-height: 1.5;
+}
+
+/* Hasil promise/async di dalam kartu */
+.promise-result,
+.async-result {
+  padding: 8px 10px;
+  margin-top: 8px;
+  border-left: 3px solid #3b82f6;
+  background: #f8fafc;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+}
+
+.promise-outputs,
+.async-outputs {
+  margin-top: 6px;
+}

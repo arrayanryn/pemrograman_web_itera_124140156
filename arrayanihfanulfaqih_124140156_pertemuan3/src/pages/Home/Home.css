@@ -1,0 +1,29 @@
+/* ===== Home — layout halaman utama ===== */
+
+.home {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.home-kolom-form {
+  position: sticky;
+  top: 84px;
+}
+
+.home-kolom-daftar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .home-kolom-form {
+    position: static;
+  }
+}

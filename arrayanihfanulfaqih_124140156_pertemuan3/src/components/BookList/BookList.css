@@ -1,0 +1,152 @@
+/* ===== BookList — styling daftar buku ===== */
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.15s ease;
+}
+
+.book-item:hover {
+  border-color: #475569;
+}
+
+/* Badge status */
+.badge {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge-milik {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.badge-baca {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.badge-beli {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+}
+
+/* Info buku */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.judul {
+  font-weight: 600;
+  color: #f1f5f9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.penulis {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Aksi */
+.aksi {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-kecil {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: filter 0.15s ease;
+}
+
+.btn-kecil:hover {
+  filter: brightness(1.15);
+}
+
+.btn-edit {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.btn-abu {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: white;
+}
+
+/* Mode edit inline */
+.edit-form {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.edit-input,
+.edit-select {
+  background: #0f172a;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  color: #f1f5f9;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.edit-input {
+  flex: 1;
+  min-width: 120px;
+}
+
+.edit-aksi {
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+/* Pesan kosong */
+.kosong {
+  text-align: center;
+  color: #64748b;
+  background: #1e293b;
+  border: 1px dashed #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+}

@@ -1,0 +1,65 @@
+/* ===== Navbar — styling navigasi ===== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.45rem 0.95rem;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: #e0f2fe;
+  background: #1e293b;
+}
+
+/* NavLink aktif dari React Router */
+.nav-links a.aktif {
+  color: #f0f9ff;
+  background: #0369a1;
+}
+
+.identitas {
+  font-size: 0.8rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .identitas {
+    width: 100%;
+  }
+}

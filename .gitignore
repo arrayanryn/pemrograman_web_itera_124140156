@@ -1,2 +1,8 @@
 # File kerja internal (tidak untuk dikumpulkan)
 REPORT.md
+
+# Dependensi & build (Vite React)
+node_modules/
+dist/
+.env
+.env.local

@@ -1,0 +1,4 @@
+﻿=== Program Penghitung BMI ===
+Masukkan berat badan (kg) : Masukkan tinggi badan (m) : 
+Nilai BMI Anda          : 22.86
+Kategori                : Berat badan normal

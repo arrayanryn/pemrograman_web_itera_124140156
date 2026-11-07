@@ -1,0 +1,16 @@
+# Folder virtual environment tidak ikut diunggah ke repositori
+venv/
+.venv/
+env/
+
+# Direktori cache hasil kompilasi Python
+__pycache__/
+*.py[cod]
+
+# File abal-abal sistem operasi
+.DS_Store
+Thumbs.db
+
+# File ide/editor
+.vscode/
+.idea/

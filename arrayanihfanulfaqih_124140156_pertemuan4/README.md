@@ -17,7 +17,7 @@ serta pembuatan modul kustom**.
 
 ```
 pemrograman_web_itera_124140156/
-└── arrayanihfanulfaqih_124140156/
+└── arrayanihfanulfaqih_124140156_pertemuan4/
     ├── .gitignore                    # venv/, __pycache__/ tidak ikut di-commit
     ├── README.md                     # Dokumentasi tugas (file ini)
     ├── tugas1_bmi.py                 # Soal 1 — Penghitung BMI Sederhana
@@ -134,7 +134,7 @@ format rapi dan terstruktur.
 > Persiapan: buka folder project di VS Code, lalu buka terminal
 > (`Ctrl + ` `). Pastikan Python 3 sudah terpasang (`python --version`).
 
-Di dalam folder `arrayanihfanulfaqih_124140156/`, jalankan satu per satu:
+Di dalam folder `arrayanihfanulfaqih_124140156_pertemuan4/`, jalankan satu per satu:
 
 ```bash
 # Soal 1 — Penghitung BMI
